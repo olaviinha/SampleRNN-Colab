@@ -370,6 +370,7 @@ def generate_and_save_samples(step, net, infe_para, sess):
         inp = samples[i].reshape([-1, 1]).tolist()
         out = sess.run(infe_para['infe_decode'],
                        feed_dict={infe_para['infe_sample_decode_inp']: inp})
+        args = get_arguments()
         wavfile = 'test_' + str(step)+'_'+str(i)+'.wav'
         wavpath = os.path.join(args.output_dir, wavfile)
         write_wav(out, SAMPLE_RATE, wavpath )

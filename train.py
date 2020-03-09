@@ -43,6 +43,8 @@ def get_arguments():
     parser.add_argument('--batch_size',       type=int,   default=BATCH_SIZE)
     parser.add_argument('--data_dir',         type=str,
                         default=DATA_DIRECTORY)
+    parser.add_argument('--output_dir',         type=str,
+                        default=OUTPUT_DIR)
     parser.add_argument('--logdir_root',      type=str,   default=LOGDIR_ROOT)
     parser.add_argument('--checkpoint_every', type=int,
                         default=CHECKPOINT_EVERY)

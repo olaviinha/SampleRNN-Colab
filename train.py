@@ -18,6 +18,7 @@ from samplernn import optimizer_factory
 
 DATA_DIRECTORY = './pinao-corpus'
 LOGDIR_ROOT = './logdir'
+OUTPUT_DIR = './generated'
 CHECKPOINT_EVERY = 5
 GENERATE_EVERY = 10
 NUM_STEPS = int(1e5)
@@ -367,7 +368,7 @@ def generate_and_save_samples(step, net, infe_para, sess):
         inp = samples[i].reshape([-1, 1]).tolist()
         out = sess.run(infe_para['infe_decode'],
                        feed_dict={infe_para['infe_sample_decode_inp']: inp})
-        write_wav(out, SAMPLE_RATE, './generated/test_' +
+        write_wav(out, SAMPLE_RATE, OUTPUT_DIR + 'test_' +
                   str(step)+'_'+str(i)+'.wav')
         if i >= 10:
             break

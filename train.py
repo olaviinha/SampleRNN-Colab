@@ -163,7 +163,7 @@ def average_gradients(tower_grads):
 def create_gen_wav_para(net):
     with tf.name_scope('infe_para'):
         infe_para = dict()
-        infe_para['infe_big_frame_inp'] = tf.get_variable(
+        infe_para['infe_big_frame_inp'] = tf.compat.v1.get_variable(
             "infe_big_frame_inp",
             [
                 net.batch_size,
@@ -237,7 +237,7 @@ def create_gen_wav_para(net):
             tf.float32
         )
 
-        tf.get_variable_scope().reuse_variables()
+        tf.compat.v1.get_variable_scope().reuse_variables()
         infe_para['infe_big_frame_outp'], \
             infe_para[
                 'infe_final_big_frame_state'
@@ -429,7 +429,7 @@ def main():
             net.cell.zero_state(net.batch_size, tf.float32))
         final_frame_state.append(
             net.cell.zero_state(net.batch_size, tf.float32))
-    with tf.variable_scope(tf.get_variable_scope()):
+    with tf.compat.v1.variable_scope(tf.compat.v1.get_variable_scope()):
         for i in range(args.num_gpus):
             with tf.device('/gpu:%d' % i):
                 with tf.name_scope('TOWER_%d' % (i)) as scope:
@@ -445,7 +445,7 @@ def main():
                         train_frame_state[i],
                         l2_regularization_strength=args.l2_regularization_strength  # noqa: E501
                     )              
-                    tf.get_variable_scope().reuse_variables()
+                    tf.compat.v1.get_variable_scope().reuse_variables()
                     losses.append(loss)
                     # Reuse variables for the next tower.
                     trainable = tf.trainable_variables()

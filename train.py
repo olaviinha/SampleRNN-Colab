@@ -371,7 +371,9 @@ def generate_and_save_samples(step, net, infe_para, sess):
         out = sess.run(infe_para['infe_decode'],
                        feed_dict={infe_para['infe_sample_decode_inp']: inp})
         args = get_arguments()
-        wavfile = 'test_' + str(step)+'_'+str(i)+'.wav'
+        #wavfile = 'test_' + str(step) +'_'+str(i)+'.wav'
+        #TESTR
+        wavfile = 'test_' + str(step).zfill(2) + '_' + str(i).zfill(2) + '.wav'
         wavpath = os.path.join(args.output_dir, wavfile)
         write_wav(out, SAMPLE_RATE, wavpath )
         if i >= 10:

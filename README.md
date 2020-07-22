@@ -1,7 +1,8 @@
 # SampleRNN  
 
-This is [Tensorflow implementation of SampleRNN](https://github.com/Unisound/SampleRNN) with a single modification. Please check [the original repository](https://github.com/Unisound/SampleRNN) for details and manual.
+This is an ever so slightly modified version of [Tensorflow implementation of SampleRNN](https://github.com/Unisound/SampleRNN) to be run in Google Colab. You're probably better off with [the original repository](https://github.com/Unisound/SampleRNN) (see for details & manual).
 
-## Modification
+## Modifications
 
-This version only adds support to `--output_dir` argument, allowing you to specify a path where generated WAV files are saved. 
+- Added `--output_dir` argument, allowing you to specify a path where generated WAV files are saved. 
+- 44.1 kHz sample rate

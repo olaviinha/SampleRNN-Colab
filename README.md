@@ -5,4 +5,6 @@ This is an ever so slightly modified version of [Tensorflow implementation of Sa
 ## Modifications
 
 - Added `--output_dir` argument, allowing you to specify a path where generated WAV files are saved. 
-- 44.1 kHz sample rate
+- Leading zeros to filenames of generated WAV files (so 02 comes before 10).
+- 44.1 kHz sample rate and other default settings
+- Updates on deprecated code.

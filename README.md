@@ -8,3 +8,5 @@ This is a slightly modified version of [Tensorflow implementation of SampleRNN](
 - Leading zeros to filenames of generated WAV files (so 02 comes before 10).
 - 44.1 kHz sample rate and other default settings
 - Updates on deprecated code.
+
+[Run in Colab](https://joku.asia/samplernn)

@@ -10,4 +10,4 @@ This is a slightly modified version of [Tensorflow implementation of SampleRNN](
 - Updates on deprecated code.
 
 ## Open in Colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/olaviinha/SampleRNN/blob/master/SampleRNN.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/olaviinha/SampleRNN-colab/blob/master/SampleRNN.ipynb)

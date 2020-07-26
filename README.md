@@ -5,7 +5,7 @@ This is a slightly modified version of [Tensorflow implementation of SampleRNN](
 ## Modifications
 
 - Added `--output_dir` argument, allowing you to specify a path where generated WAV files are saved. 
-- Leading zeros to filenames of generated WAV files (so 02 comes before 10).
+- Leading zeros to filenames of generated WAV files (02 comes before 10 for any possible post-processing of files).
 - 44.1 kHz sample rate and other default settings
 - Updates on deprecated code.
 

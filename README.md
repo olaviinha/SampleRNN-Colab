@@ -9,5 +9,5 @@ This is a slightly modified version of [Tensorflow implementation of SampleRNN](
 - 44.1 kHz sample rate and other default settings
 - Updates on deprecated code.
 
-## Run in Colab
-https://joku.asia/samplernn
+## Open in Colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/olaviinha/SampleRNN-Colab/blob/master/SampleRNN.ipynb)

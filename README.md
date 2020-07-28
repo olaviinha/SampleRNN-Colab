@@ -1,4 +1,4 @@
-# SampleRNN-colab
+# SampleRNN (colab)
 
 This is a slightly modified version of [Tensorflow implementation of SampleRNN](https://github.com/Unisound/SampleRNN) to be run in Google Colaboratory using Google Drive as data storage. See [the original repository](https://github.com/Unisound/SampleRNN) for details.
 

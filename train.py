@@ -7,6 +7,7 @@ import sys
 import time
 
 import librosa
+import soundfile as sf
 import numpy as np
 import tensorflow as tf
 
@@ -286,7 +287,7 @@ def create_gen_wav_para(net):
 
 def write_wav(waveform, sample_rate, filename):
     y = np.array(waveform)
-    librosa.output.write_wav(filename, y, sample_rate)
+    sf.write(filename, y, sample_rate, 'PCM_24')
     print('Updated wav file at {}'.format(filename))
 
 
